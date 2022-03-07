@@ -1,0 +1,26 @@
+Commenter / Décommenter
+> CTRL + :
+
+Copier
+> CTRL + C
+
+Coller
+> CTRL + V
+
+Couper 
+> CTRL + X
+
+Revenir en arrière
+> CTRL + Z
+
+Revenir en avant
+> CTRL + Y
+
+Déplacer des lignes
+> ALT + ↑ ↓
+
+Dupliquer une lignes
+> ALT + SHIFT + ↑ ↓
+
+Supprimer une ligne 
+> CTRL + SHIFT + K

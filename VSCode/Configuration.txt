@@ -1,0 +1,11 @@
+File > Preferences > Settings
+Dans Search Settings indiquer : 
+
+
+Pour remettre à la ligne le texte : 
+> word wrap
+Passer la valeur OFF à ON
+
+Pour zoomer : 
+> zoom
+Passer de décocher à cocher

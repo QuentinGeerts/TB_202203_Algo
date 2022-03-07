@@ -1,0 +1,23 @@
+// Commentaire single line
+
+/*
+  Commentaire
+  Multiple
+  Line
+*/
+
+// exo00 Stockez dans une variable nommée message la chaine de caractères "Bienvenue" et affichez son contenu à l'écran
+
+Algorithme Exo00
+DEBUT
+  // Déclaration
+  Variable message : Chaine
+
+  // Affectation
+  message <- "Bienvenue"
+
+  // Affichage
+  Ecrire(message)
+
+
+FIN

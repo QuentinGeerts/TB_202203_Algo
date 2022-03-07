@@ -1,0 +1,9 @@
+Algorithme nomAlgo
+DEBUT
+  Variable age : Entier
+
+  Ecrire("Quel âge as-tu ?")
+  Lire(age)
+
+  Ecrire("Donc tu as " & age & " ans.")
+FIN

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-04 02:52:40 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDQ7IjEyOjIyOjM0ICI7MzYyMA=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDQ7IjAyOjUyOjQwICI7MzszNzI5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="D&#233;claration des variables"/>
+            <declare name="firstname, lastname" type="String" array="False" size=""/>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <declare name="isMale" type="Boolean" array="False" size=""/>
+            <declare name="size" type="Real" array="False" size=""/>
+            <comment text="Initialiser les variables"/>
+            <assign variable="firstname" expression="&quot;Quentin&quot;"/>
+            <assign variable="lastname" expression="&quot;Geerts&quot;"/>
+            <assign variable="age" expression="26"/>
+            <comment text="Bool&#233;en : true / false"/>
+            <assign variable="isMale" expression="true"/>
+            <assign variable="size" expression="180.5"/>
+            <comment text="Afficher les informations dans la console"/>
+            <output expression="&quot;Afficher un message texte&quot;" newline="True"/>
+            <output expression="firstname" newline="True"/>
+            <comment text="Tu as 26 ans."/>
+            <output expression="&quot;Tu as &quot; &amp; age &amp; &quot; ans&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

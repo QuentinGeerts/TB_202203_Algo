@@ -1,0 +1,18 @@
+// exo02 Récupérez le nom et le prénom de l'utilisateur puis affichez le message "Bienvenue prenom nom"
+
+Algorithme Exo02
+DEBUT
+  // Déclaration des variables
+  Variable nom, prenom : Chaine
+
+  // Affectation => demander à l'utilisateur d'entrer son nom et son prénom
+  Ecrire("Entrez votre nom :")
+  Lire(nom)
+
+  Ecrire("Entrez votre prénom :")
+  Lire(prenom)
+
+  // Afficher le message de bienvenue
+  Ecrire("Bienvenue " & prenom & " " & nom)
+
+FIN
