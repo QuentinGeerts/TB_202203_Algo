@@ -1,0 +1,9 @@
+Algorithme Exo03
+DEBUT
+  Variable a, b, c, d, e : Entier
+  a <- 8 MOD 3 // 2
+  b <- 4 + a // 6
+  c <- b * a // 12
+  d <- (c - a) * b // 60
+  e <- ((a + 7) * (d DIV a)) * 0 // (270) * 0 => 0
+FIN

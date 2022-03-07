@@ -1,0 +1,22 @@
+// exo 01 Trouvez une méthode permettant d’inverser le contenu de deux variables (du même type évidemment) Si nb 1 5 et nb 2 7 après ce traitement, nb 1 7 et nb 2 5
+
+Algorithme Exo01
+DEBUT
+  // Déclaration des variables
+  Variable nb1, nb2, save : Chaine
+
+  // Affectation
+  nb1 <- "5"
+  nb2 <- "7"
+
+  // Affichage des résultats
+  Ecrire("Avant : nb1 = " & nb1 & " et nb2 = " & nb2)
+
+  // Traitement
+  nb1 <- nb1 + nb2
+  nb2 <- nb1 - nb2
+  nb1 <- nb1 - nb2
+
+  // Affichage des résultats
+  Ecrire("Après : nb1 = " & nb1 & " et nb2 = " & nb2)
+FIN
