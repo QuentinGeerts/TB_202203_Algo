@@ -1,0 +1,37 @@
+/* 
+  exo05
+  Réalisez un algorithme convertisseur de secondes. 
+
+  Ce dernier reçoit un nombre de secondes et détermine le nombre de jours, heures, minutes et secondes auquel il correspond.
+
+  ● 4561 secondes correspondent à 0 jour 1 heure 16 minutes et 1 seconde.
+
+  Réfléchissez à la méthode que nous devons utiliser.
+*/
+
+Algorithme Exo05
+DEBUT
+  // Déclaration des variables
+  Variable secondsT, days, hours, minutes, seconds : Entier
+  
+  // Création des constantes de temps
+  Constante NBSDAY = 86400
+  Constante NBSHOUR = 3600
+  Constante NBSMINUTE = 60
+
+  // Inviter la personne a entrer un temps à convertir
+  Ecrire("Entrez un temps à convertir :")
+  Lire(secondsT)
+
+  // Conversion de la durée total en secondes vers une durée en jour heure minute et seconde
+  days <- secondsT / NBSDAY
+  hours <- (secondsT % NBSDAY) / NBSHOUR
+  minutes <- ((secondsT % NBSDAY) % NBSHOUR) / NBSMINUTE
+  seconds <- ((secondsT % NBSDAY) % NBSHOUR) % NBSMINUTE
+
+  // Afficher le résultat de la conversion
+  Ecrire(secondsT & " secondes correspondent à " & days & " jour " & hours & " heure " & minutes & " minutes et " & seconds & " seconde.")
+
+FIN
+
+
