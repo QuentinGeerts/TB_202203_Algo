@@ -1,0 +1,22 @@
+Algorithme Exo06
+DEBUT
+  
+  Variable a, b, e : Entier
+  Variable c, d : Booleen
+
+  a <- 3
+  b <- 9
+  c <- Faux
+  d <- NON (c)
+  e <- 9
+
+  Ecrire(a > 8)
+  Ecrire(b == 9)
+  Ecrire(NON(a != 3))
+  Ecrire(NON(c))
+  Ecrire((a < b) OU c)
+  Ecrire(NON((a + b) != 12))
+  Ecrire((b == 5) OU ((e > 10) ET (a < 8)))
+  Ecrire((((b == 5) OU ((e > 10) ET (a < 8))) OU (a < b) OU c) ET c)
+
+FIN
