@@ -1,0 +1,22 @@
+Algorithme Exo13
+DEBUT
+  // Déclaration
+  Variable nb, result : Entier
+
+  // Initialisation
+  nb <- 1
+
+  // Condition
+  TANTQUE nb <= 10 FAIRE
+    
+    // Calculer
+    result <- nb * 2
+
+    // Affiche la valeur
+    Ecrire("2 * " & nb & " = " & result)
+
+    // Incrémentation / Modification
+    nb <- nb + 1
+  FINTQ
+  
+FIN

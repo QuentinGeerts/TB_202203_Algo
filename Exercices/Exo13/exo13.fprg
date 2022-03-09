@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-09 04:38:31 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDk7IjA0OjI5OjM5ICI7MzYzOA=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDk7IjA0OjM4OjMxICI7MjszNzM5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="exo 13 &#192; l&#8217;aide d&#8217;une boucle, affichez la table de multiplication par 2 Ensuite,"/>
+            <comment text="D&#233;clarer les variables"/>
+            <declare name="nb, result" type="Integer" array="False" size=""/>
+            <comment text="D&#233;claration + initialisation"/>
+            <assign variable="nb" expression="1"/>
+            <comment text="Condition de boucle"/>
+            <while expression="nb &lt;= 10">
+                <assign variable="result" expression="2 * nb"/>
+                <output expression="&quot;2 * &quot; &amp; nb &amp; &quot; = &quot; &amp; result" newline="True"/>
+                <comment text="Incr&#233;mentation / Modification"/>
+                <assign variable="nb" expression="nb + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
