@@ -1,0 +1,72 @@
+/*
+  exo 12 Réalisez un algorithme utilisant le convertisseur de secondes, il reçoit deux durées en jours, heures, minutes et secondes puis il calcule la différence entre ces dernières
+*/
+
+Algorithme Exo12
+DEBUT
+  
+  // Déclaration
+  Constante NBS_DAY = 86400
+  Constante NBS_HOUR = 3600
+  Constante NBS_MINUTE = 60
+
+  // Durée 1
+  Variable j1, h1, m1, s1, d1 : Entier
+
+  // Durée 2
+  Variable j2, h2, m2, s2, d2 : Entier
+
+  // Durée totale
+  Variable jt, ht, mt, st, dt : Entier
+
+  // Initialisation des données en demandant à l'utilisateur de les remplir
+
+  // Initialiser la première durée
+  Ecrire("Initialisation de la première durée :")
+  Ecrire("Entrez le nombre de jours :")
+  Lire(j1)
+  Ecrire("Entrez le nombre d'heures : ")
+  Lire(h1)
+  Ecrire("Entrez le nombre de minutes : ")
+  Lire(m1)
+  Ecrire("Entrez le nombre de secondes : ")
+  Lire(s1)
+
+  // Initialiser la première durée
+  Ecrire("Initialisation de la deuxième durée :")
+  Ecrire("Entrez le nombre de jours :")
+  Lire(j2)
+  Ecrire("Entrez le nombre d'heures : ")
+  Lire(h2)
+  Ecrire("Entrez le nombre de minutes : ")
+  Lire(m2)
+  Ecrire("Entrez le nombre de secondes : ")
+  Lire(s2)
+
+  // Conversion des durées en secondes
+  d1 <- j1 * NBSDAY + h1 * NBSHOUR + m1 * NBSMINUTE + s1
+  d2 <- j2 * NBSDAY + h2 * NBSHOUR + m2 * NBSMINUTE + s2
+
+  // Vérification de la soustraction
+  SI d1 > d2 ALORS
+    dt <- d1 - d2
+
+  SINON
+    dt <- d2 - d1
+  FINSI
+
+  // Conversion de la durée en secondes en JHMS
+  jt <- dt / NBS_DAY
+  ht <- (dt % NBS_DAY) / NBS_HOUR
+  mt <- ((dt % NBS_DAY) % NBS_HOUR) / NBS_MINUTE
+  st <- ((dt % NBS_DAY) % NBS_HOUR) % NBS_MINUTE
+
+  // Afficher le résultat final
+
+  Ecrire("Récapitulatif des durées : ")
+  Ecrire("Durée 1 : " & j1 & " jour(s) " & h1 & " heure(s) " & m1 & " minute(s) " & s1 & " seconde(s)")
+  Ecrire("Durée 2 : " & j2 & " jour(s) " & h2 & " heure(s) " & m2 & " minute(s) " & s2 & " seconde(s)")
+  Ecrire("Durée totale : " & jt & " jour(s) " & ht & " heure(s) " & mt & " minute(s) " & st & " seconde(s)")
+
+FIN
+

@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-09 02:58:11 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDk7IjEyOjExOjE0ICI7MzYyMQ=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDk7IjAyOjU4OjExICI7NTszNzQw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="exo 12 &#13;&#10;R&#233;alisez un algorithme utilisant le convertisseur de secondes, il re&#231;oit deux dur&#233;es en jours, heures, minutes et secondes puis il calcule la diff&#233;rence entre ces derni&#232;res"/>
+            <comment text="D&#233;claration"/>
+            <declare name="NBSDAY, NBSHOUR, NBSMINUTE" type="Integer" array="False" size=""/>
+            <assign variable="NBSDAY" expression="86400"/>
+            <assign variable="NBSHOUR" expression="3600"/>
+            <assign variable="NBSMINUTE" expression="60"/>
+            <comment text="Dur&#233;e 1"/>
+            <declare name="j1, h1, m1, s1, d1" type="Integer" array="False" size=""/>
+            <comment text="Dur&#233;e 2"/>
+            <declare name="j2, h2, m2, s2, d2" type="Integer" array="False" size=""/>
+            <comment text="Dur&#233;e totale"/>
+            <declare name="jt, ht, mt, st, dt" type="Integer" array="False" size=""/>
+            <comment text="Initialisation des donn&#233;es en demandant &#224; l'utilisateur de les remplir"/>
+            <comment text="Initialiser la premi&#232;re dur&#233;e"/>
+            <output expression="&quot;Initialisation de la premi&#232;re dur&#233;e :&quot;" newline="True"/>
+            <output expression="&quot;Entrez le nombre de jours :&quot;" newline="True"/>
+            <input variable="j1"/>
+            <output expression="&quot;Entrez le nombre d'heures : &quot;" newline="True"/>
+            <input variable="h1"/>
+            <output expression="&quot;Entrez le nombre de minutes : &quot;" newline="True"/>
+            <input variable="m1"/>
+            <output expression="&quot;Entrez le nombre de secondes : &quot;" newline="True"/>
+            <input variable="s1"/>
+            <comment text="Initialiser la deux&#232;me dur&#233;e"/>
+            <output expression="&quot;Initialisation de la deuxi&#232;me dur&#233;e :&quot;" newline="False"/>
+            <output expression="&quot;Entrez le nombre de jours :&quot;" newline="True"/>
+            <input variable="j2"/>
+            <output expression="&quot;Entrez le nombre d'heures : &quot;" newline="True"/>
+            <input variable="h2"/>
+            <output expression="&quot;Entrez le nombre de minutes : &quot;" newline="True"/>
+            <input variable="m2"/>
+            <output expression="&quot;Entrez le nombre de secondes : &quot;" newline="True"/>
+            <input variable="s2"/>
+            <comment text="Conversion des dur&#233;es en secondes"/>
+            <assign variable="d1" expression="j1 * NBSDAY + h1 * NBSHOUR + m1 * NBSMINUTE + s1"/>
+            <assign variable="d2" expression="j2 * NBSDAY + h2 * NBSHOUR + m2 * NBSMINUTE + s2"/>
+            <comment text="V&#233;rification de la soustraction"/>
+            <if expression="d1 &gt; d2">
+                <then>
+                    <assign variable="dt" expression="d1 - d2"/>
+                </then>
+                <else>
+                    <assign variable="dt" expression="d2 - d1"/>
+                </else>
+            </if>
+            <comment text="Conversion de la dur&#233;e en secondes en JHMS"/>
+            <assign variable="jt" expression="dt / NBSDAY"/>
+            <assign variable="ht" expression="(dt % NBSDAY) / NBSHOUR"/>
+            <assign variable="mt" expression="((dt % NBSDAY) % NBSHOUR) / NBSMINUTE"/>
+            <assign variable="st" expression="((dt % NBSDAY) % NBSHOUR) % NBSMINUTE"/>
+            <comment text="Afficher le r&#233;sultat final"/>
+            <output expression="&quot;R&#233;capitulatif des dur&#233;es : &quot;" newline="True"/>
+            <output expression="&quot;Dur&#233;e 1 : &quot; &amp; j1 &amp; &quot; jour(s) &quot; &amp; h1 &amp; &quot; heure(s) &quot; &amp; m1 &amp; &quot; minute(s) &quot; &amp; s1 &amp; &quot; seconde(s)&quot;" newline="True"/>
+            <output expression="&quot;Dur&#233;e 2 : &quot; &amp; j2 &amp; &quot; jour(s) &quot; &amp; h2 &amp; &quot; heure(s) &quot; &amp; m2 &amp; &quot; minute(s) &quot; &amp; s2 &amp; &quot; seconde(s)&quot;" newline="True"/>
+            <output expression="&quot;Dur&#233;e totale : &quot; &amp; jt &amp; &quot; jour(s) &quot; &amp; ht &amp; &quot; heure(s) &quot; &amp; mt &amp; &quot; minute(s) &quot; &amp; st &amp; &quot; seconde(s)&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
