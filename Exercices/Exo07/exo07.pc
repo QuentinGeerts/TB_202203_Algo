@@ -1,0 +1,16 @@
+Algorithme Exo07
+DEBUT
+  // Déclaration
+  Variable year : Entier
+
+  // Affectation
+  Ecrire("Entrez une année : ")
+  Lire(year)
+
+  SI year % 4 == 0 && year % 100 != 0 || year % 400 == 0 ALORS
+    Ecrire("Année bissextile")
+  SINON
+    Ecrire("Année non bissextile")
+  FINSI
+
+FIN

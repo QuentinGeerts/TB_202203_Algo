@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-09 10:07:05 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDk7IjA5OjMyOjU4ICI7MzYzOA=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDk7IjEwOjA3OjA1ICI7NDszNzM1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="exo10 Calculatrice&#13;&#10;&#13;&#10;R&#233;alisez l&#8217;algorithme d&#8217;une calculatrice basique. &#13;&#10;L&#8217;utilisateur est invit&#233; &#224; saisir un nombre, un op&#233;rateur et un deuxi&#232;me nombre. La calculatrice affiche ensuite le calcul et le r&#233;sultat. &#13;&#10;&#13;&#10;(G&#233;rer la division par 0)"/>
+            <comment text="D&#233;claration"/>
+            <declare name="result, nb1, nb2" type="Real" array="False" size=""/>
+            <declare name="op" type="String" array="False" size=""/>
+            <comment text="Inviter l'utilisateur &#224; entrer les informations de calcul"/>
+            <output expression="&quot;Entrez le premier nombre : &quot;" newline="True"/>
+            <input variable="nb1"/>
+            <output expression="&quot;Entrez l'op&#233;rateur : &quot;" newline="True"/>
+            <input variable="op"/>
+            <output expression="&quot;Entrez le deuxi&#232;me nombre : &quot;" newline="True"/>
+            <input variable="nb2"/>
+            <if expression="op == &quot;+&quot; || op == &quot;-&quot; || op == &quot;*&quot; || op == &quot;/&quot; || op == &quot;%&quot;">
+                <then>
+                    <if expression="op == &quot;+&quot;">
+                        <then>
+                            <comment text="Addition"/>
+                            <assign variable="result" expression="nb1 + nb2"/>
+                        </then>
+                        <else>
+                            <comment text="Soustraction, Multiplication, Division"/>
+                            <if expression="op == &quot;-&quot;">
+                                <then>
+                                    <comment text="Soustraction"/>
+                                    <assign variable="result" expression="nb1 - nb2"/>
+                                </then>
+                                <else>
+                                    <comment text="Multiplication, Division"/>
+                                    <if expression="op == &quot;*&quot;">
+                                        <then>
+                                            <comment text="Multiplication"/>
+                                            <assign variable="result" expression="nb1 * nb2"/>
+                                        </then>
+                                        <else>
+                                            <if expression="op == &quot;/&quot;">
+                                                <then>
+                                                    <comment text="Division"/>
+                                                    <if expression="nb2 != 0">
+                                                        <then>
+                                                            <assign variable="result" expression="nb1 / nb2"/>
+                                                        </then>
+                                                        <else/>
+                                                    </if>
+                                                </then>
+                                                <else>
+                                                    <if expression="op == &quot;%&quot;">
+                                                        <then>
+                                                            <if expression="nb2 != 0">
+                                                                <then>
+                                                                    <assign variable="result" expression="nb1 % nb2"/>
+                                                                </then>
+                                                                <else/>
+                                                            </if>
+                                                        </then>
+                                                        <else/>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <if expression="op == &quot;/&quot; || op == &quot;%&quot; &amp;&amp; nb2 == 0">
+                        <then>
+                            <output expression="&quot;Erreur&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="nb1 &amp; &quot; &quot; &amp; op &amp; &quot; &quot; &amp; nb2 &amp; &quot; = &quot; &amp; result" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Op&#233;rateur non reconnu&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

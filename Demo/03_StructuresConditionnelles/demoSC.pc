@@ -1,0 +1,58 @@
+Algorithme demoSC
+DEBUT
+  Variable age : Entier
+
+  Ecrire("Entrez votre âge :")
+  Lire(age)
+
+  SI age < 18 ALORS
+    Ecrire("Accès interdit")
+    // ...
+    // ...
+    // ...
+  SINON
+    Ecrire("Bienvenue")
+    // ...
+    // ...
+    // ...
+  FINSI
+
+  // -----
+
+  SI jour == 1 ALORS
+    Ecrire("Lundi")
+  SINON
+    SI jour == 2 ALORS
+      Ecrire("Mardi")
+    SINON
+      SI jour == 3 ALORS
+        Ecrire("Mercredi")
+      SINON
+        // ... 
+      FINSI
+    FINSI
+  FINSI
+
+  // ----
+
+  Variable taille : Entier
+
+  SI taille > 190 ALORS
+    Ecrire("Vous êtes de grande taille")
+  
+  SINONSI taille > 170 ALORS
+    Ecrire("Vous êtes de taille normale")
+  
+  SINONSI taille > 150 ALORS
+    Ecrire("Vous êtes de petite taille")
+  
+  SINONSI taille > 130 ALORS
+    Ecrire("Vous êtes trèèèèès petit")
+  
+
+  SINON
+    Ecrire("Taille non répertoriée")
+  FINSI
+  
+  
+FIN

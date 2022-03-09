@@ -7,7 +7,7 @@ DEBUT
   a <- 3
   b <- 9
   c <- Faux
-  d <- NON (c)
+  d <- NON(c)
   e <- 9
 
   // 1. 

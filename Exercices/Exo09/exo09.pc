@@ -1,0 +1,44 @@
+Algorithme Exo09
+DEBUT
+  // Déclaration
+  Variable choix : Chaine
+  
+  // Gestion des stocks
+  Variable stockCoca, stockFanta, stockEau : Entier
+
+  stockCoca <- 0
+  stockFanta <- 2
+  stockEau <- 10
+
+  // Menu
+  Ecrire("Menu :")
+  Ecrire("1. Coca")
+  Ecrire("2. Fanta")
+  Ecrire("3. Eau")
+
+  Lire(choix)
+  
+  SI choix == "1" || choix == "2" || choix == "3" ALORS
+    
+    SI choix == "1" && stockCoca > 0 ALORS
+      Ecrire("Voici votre boisson")
+      stockCoca <- stockCoca - 1
+
+    SINONSI choix == "2" && stockFanta > 0 ALORS
+      Ecrire("Voici votre boisson")
+      stockFanta <- stockFanta - 1
+
+    SINONSI choix == "3" && stockEau > 0 ALORS
+      Ecrire("Voici votre boisson")
+      stockEau <- stockEau - 1
+    
+    SINON
+      Ecrire("Stock insuffisant.")
+
+    FINSI
+
+  SINON
+    Ecrire("Boisson non reconnue")
+  FINSI
+
+FIN

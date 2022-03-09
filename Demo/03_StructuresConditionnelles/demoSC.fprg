@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-07 04:37:48 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDc7IjA0OjMyOjA3ICI7MzYyNQ=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDc7IjA0OjM3OjQ4ICI7MjszNzQ0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="jour" type="Integer" array="False" size=""/>
+            <output expression="&quot;Entrez le num&#233;ro d'un jour de la semaine : &quot;" newline="True"/>
+            <input variable="jour"/>
+            <if expression="jour == 1">
+                <then>
+                    <output expression="&quot;Lundi&quot;" newline="True"/>
+                </then>
+                <else>
+                    <comment text="mardi, mercredi, jeudi, vendredi, samedi, dimanche"/>
+                    <if expression="jour == 2">
+                        <then>
+                            <output expression="&quot;Mardi&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <comment text="mercredi, jeudi, vendredi, samedi, dimanche"/>
+                            <if expression="jour == 3">
+                                <then>
+                                    <output expression="&quot;Mercredi&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <comment text="jeudi, vendredi, samedi, dimanche"/>
+                                    <if expression="jour == 4">
+                                        <then>
+                                            <output expression="&quot;Jeudi&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="jour == 5">
+                                                <then>
+                                                    <output expression="&quot;Vendredi&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <comment text="samedi, dimanche"/>
+                                                    <if expression="jour == 6">
+                                                        <then>
+                                                            <output expression="&quot;Samedi&quot;" newline="True"/>
+                                                        </then>
+                                                        <else>
+                                                            <comment text="dimanche ou autre"/>
+                                                            <if expression="jour == 7">
+                                                                <then>
+                                                                    <output expression="&quot;Dimanche&quot;" newline="True"/>
+                                                                </then>
+                                                                <else>
+                                                                    <output expression="&quot;Erreur&quot;" newline="True"/>
+                                                                </else>
+                                                            </if>
+                                                        </else>
+                                                    </if>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

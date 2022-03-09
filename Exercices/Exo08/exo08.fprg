@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-08 01:41:37 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDg7IjEyOjI1OjAzICI7MzYyMw=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDg7IjAxOjQxOjM3ICI7NTszNzM4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="exo8 Lanceur de balles de tennis (Pseudo Code + Python)&#13;&#10;R&#233;alisez l&#8217;algorithme d&#8217;un lanceur de balles de tennis. Ce lanceur poss&#232;de deux &#233;tats&#13;&#10;&#8211; pret : permet de savoir si le tennisman est pr&#234;t. Il ne faut pas lancer de balles dans le cas contraire&#13;&#10;&#8211; panier_vide : permet de savoir s&#8217;il y a encore des balles disponibles &#13;&#10;&#13;&#10;Le lanceur de balle poss&#232;de l&#8217;op&#233;ration &#171; lancerBalle &#187; qui, vous l&#8217;aurez compris, permet de lancer une balle."/>
+            <comment text="D&#233;claration"/>
+            <declare name="pret, panierVide" type="Boolean" array="False" size=""/>
+            <comment text="Demander &#224; l'utilisateur de rentrer les informations pour lancer la balle"/>
+            <output expression="&quot;&#202;tes-vous pr&#234;t ? (true / false)&quot;" newline="True"/>
+            <input variable="pret"/>
+            <output expression="&quot;Le panier est-il vide ? (true / false)&quot;" newline="True"/>
+            <input variable="panierVide"/>
+            <if expression="pret == true &amp;&amp; panierVide == false">
+                <then>
+                    <output expression="&quot;Lancer la balle&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Ne pas lancer la balle&quot;" newline="True"/>
+                    <if expression="pret == false">
+                        <then>
+                            <output expression="&quot;Car vous n'&#234;tes pas pr&#234;t&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <if expression="panierVide == true">
+                        <then>
+                            <output expression="&quot;Car votre panier est vide&quot;" newline="True"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-08 04:20:36 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDg7IjAyOjMxOjEwICI7MzYxNw=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDg7IjA0OjIwOjM2ICI7MzszNzM1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="choix" type="String" array="False" size=""/>
+            <comment text="Gestion des stocks"/>
+            <declare name="stockCoca, stockFanta, stockEau" type="Integer" array="False" size=""/>
+            <assign variable="stockCoca" expression="0"/>
+            <assign variable="stockFanta" expression="2"/>
+            <assign variable="stockEau" expression="10"/>
+            <comment text="Menu"/>
+            <output expression="&quot;Menu :&quot;" newline="True"/>
+            <output expression="&quot;1. Coca&quot;" newline="True"/>
+            <output expression="&quot;2. Fanta&quot;" newline="True"/>
+            <output expression="&quot;3. Eau&quot;" newline="True"/>
+            <input variable="choix"/>
+            <if expression="choix == &quot;1&quot; || choix == &quot;2&quot; || choix == &quot;3&quot;">
+                <then>
+                    <if expression="choix == &quot;1&quot; &amp;&amp; stockCoca &gt; 0">
+                        <then>
+                            <comment text="Coca"/>
+                            <output expression="&quot;Voici votre boisson&quot;" newline="True"/>
+                            <assign variable="stockCoca" expression="stockCoca - 1"/>
+                        </then>
+                        <else>
+                            <comment text="Fanta, eau, autre"/>
+                            <if expression="choix == &quot;2&quot; &amp;&amp; stockFanta &gt; 0">
+                                <then>
+                                    <comment text="Fanta"/>
+                                    <output expression="&quot;Voici votre boisson&quot;" newline="True"/>
+                                    <assign variable="stockFanta" expression="stockFanta - 1"/>
+                                </then>
+                                <else>
+                                    <comment text="eau, autre"/>
+                                    <if expression="choix == &quot;3&quot; &amp;&amp; stockEau &gt; 0">
+                                        <then>
+                                            <comment text="Eau"/>
+                                            <output expression="&quot;Voici votre boisson&quot;" newline="True"/>
+                                            <assign variable="stockEau" expression="stockEau - 1"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Plus de stocks&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Boisson non reconnue&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

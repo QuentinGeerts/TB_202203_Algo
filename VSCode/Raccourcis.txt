@@ -24,3 +24,6 @@ Dupliquer une lignes
 
 Supprimer une ligne 
 > CTRL + SHIFT + K
+
+Multi-curseur
+> (se placer à une position) Maintenir ALT enfoncé + clic gauche aux endroits où vous voulez placer le(s) curseur(s)

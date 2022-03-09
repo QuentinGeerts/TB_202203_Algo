@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-07 04:14:29 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDc7IjA0OjEwOjI5ICI7MzYyNQ=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDc7IjA0OjE0OjI5ICI7MjszNzM4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, e" type="Integer" array="False" size=""/>
+            <declare name="c, d" type="Boolean" array="False" size=""/>
+            <assign variable="a" expression="3"/>
+            <assign variable="b" expression="9"/>
+            <assign variable="c" expression="false"/>
+            <assign variable="d" expression="!c"/>
+            <assign variable="e" expression="9"/>
+            <output expression="a &gt; 8" newline="True"/>
+            <output expression="b == 9" newline="True"/>
+            <output expression="!(a != 3)" newline="True"/>
+            <output expression="!c" newline="True"/>
+            <output expression="(a &lt; b) || c" newline="True"/>
+            <output expression="!((a + b) != 12)" newline="True"/>
+            <output expression="(b == 5) || ((e &gt; 10) &amp;&amp; (a &lt; 8))" newline="True"/>
+            <output expression="(((b == 5) || ((e &gt; 10) &amp;&amp; (a &lt; 8))) || (a &lt; b) || c) &amp;&amp; c" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

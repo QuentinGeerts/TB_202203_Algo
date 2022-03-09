@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-08 11:13:14 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDg7IjEwOjU5OjM0ICI7MzYzMg=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDg7IjExOjEzOjE0ICI7MjszNzMw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="exo07 Ann&#233;e bissextile (Pseudo Code + Python)&#13;&#10;R&#233;alisez un petit algorithme qui sur base d&#8217;une ann&#233;e donn&#233;e va d&#233;terminer s&#8217;il s&#8217;agit d&#8217;une ann&#233;e bissextile.&#13;&#10;Une ann&#233;e est bissextile si elle est divisible par 4, mais non divisible par 100. Ou si elle est divisible par 400.&#13;&#10;Bissextile : 2000, 1996&#13;&#10;!Bissextile : 1900, 1997"/>
+            <declare name="year" type="Integer" array="False" size=""/>
+            <output expression="&quot;Entrez une ann&#233;e : &quot;" newline="True"/>
+            <input variable="year"/>
+            <if expression="year % 4 == 0 &amp;&amp; year % 100 != 0 || year % 400 == 0">
+                <then>
+                    <output expression="year &amp; &quot; est bissextile&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="year &amp; &quot; n'est pas bissextile&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

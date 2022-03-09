@@ -1,0 +1,27 @@
+Algorithme Exo08
+DEBUT
+  Variable pret, panier_vide : Booleen
+
+  Ecrire("Êtes-vous prêt ? (true / false)")
+  Lire(pret)
+
+  Ecrire("Le panier est-il vide ? (true / false)")
+  Lire(panier_vide)
+
+  SI pret == true && panier_vide == false ALORS
+  // SI pret && NON(panier_vide) ALORS
+    Ecrire("Lancer la balle")
+  SINON
+    Ecrire("Ne pas lancer la balle")
+
+    SI pret == false ALORS
+    // SI NON(pret) ALORS
+      Ecrire("Car vous n'êtes pas prêt.")
+    FINSI
+
+    SI panier_vide == true ALORS
+    // SI panier_vide ALORS
+      Ecrire("Car le panier est vide.")
+    FINSI
+  FINSI
+FIN
