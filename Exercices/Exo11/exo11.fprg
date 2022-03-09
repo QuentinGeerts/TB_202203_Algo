@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-09 12:07:10 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDk7IjExOjUwOjE4ICI7MzYyNw=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMDk7IjEyOjA3OjEwICI7MTszNzMw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="exo11_Note&#13;&#10;Ecrivez un algorithme qui met l'appr&#233;ciation par rapport &#224; des notes. Ces notes sont comprises entre 0 et 20 et peuvent &#234;tre un r&#233;el."/>
+            <declare name="note" type="Real" array="False" size=""/>
+            <output expression="&quot;Entrez une note :&quot;" newline="True"/>
+            <input variable="note"/>
+            <if expression="note &gt;= 0 &amp;&amp; note &lt;= 20">
+                <then>
+                    <comment text="Correcte"/>
+                    <if expression="note &lt; 11">
+                        <then>
+                            <output expression="&quot;Insuffisant&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="note &lt; 13">
+                                <then>
+                                    <output expression="&quot;Suffisant&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="note &lt; 16">
+                                        <then>
+                                            <output expression="&quot;Bien&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="note &lt; 19">
+                                                <then>
+                                                    <output expression="&quot;Tr&#232;s bien&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Excellent&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <comment text="Pas correcte"/>
+                    <output expression="&quot;La note doit &#234;tre comprise entre 0 et 20.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

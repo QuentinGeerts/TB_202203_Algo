@@ -1,0 +1,31 @@
+Algorithme Exo11
+DEBUT
+  Variable note : Reel
+
+  Ecrire("Entrez une note :")
+  Lire(note)
+
+  SI note >= 0 && note <= 20 ALORS
+    SI note < 11 ALORS
+      Ecrire("Insuffisant")
+    
+    SINONSI note < 13 ALORS
+      Ecrire("Suffisant")
+    
+    SINONSI note < 16 ALORS
+      Ecrire("Bien")
+    
+    SINONSI note < 19 ALORS
+      Ecrire("Très Bien")
+    
+    SINON
+      Ecrire("Excellent")
+    
+    FINSI
+  
+  SINON
+    Ecrire("La note doit être comprise entre 0 et 20.")
+  
+  FINSI
+  
+FIN
