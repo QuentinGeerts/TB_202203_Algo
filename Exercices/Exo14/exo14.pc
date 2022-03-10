@@ -1,0 +1,25 @@
+Algorithme Exo14
+DEBUT
+  Variable stockBalles : Entier
+  Variable pret : Booleen
+
+  Ecrire("Combien de balles avez-vous ?")
+  Lire(stockBalles)
+
+  TANTQUE stockBalles > 0 FAIRE
+    Ecrire("Balles restantes : " & stockBalles)
+    Ecrire("Êtes-vous prêt ?")
+    Lire(pret)
+
+    SI pret ALORS
+      Ecrire("Lancer la balle")
+      stockBalles <- stockBalles - 1
+    SINON
+      Ecrire("Ne pas lancer la balle")  
+    FINSI
+  
+  FINTQ
+
+  Ecrire("Plus de balles restantes.")
+  
+FIN

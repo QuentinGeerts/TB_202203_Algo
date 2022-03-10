@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-10 11:15:54 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMTA7IjEwOjU5OjUzICI7MzYyNg=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMTA7IjExOjE1OjU0ICI7MjszNzI5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="exo 14 &#13;&#10;Reprenez l&#8217;algorithme du lanceur de balles de tennis et faites en sorte qu&#8217;il lance une balle tant que le stock n&#8217;est pas vide Il y a donc 2 variables stockBalles et pret"/>
+            <comment text="D&#233;claration"/>
+            <declare name="stockBalles" type="Integer" array="False" size=""/>
+            <declare name="pret" type="Boolean" array="False" size=""/>
+            <comment text="Demander &#224; l'utilisateur d'entrer un nombre de balles"/>
+            <output expression="&quot;Combien de balles avez-vous?&quot;" newline="True"/>
+            <comment text="Initialisation"/>
+            <input variable="stockBalles"/>
+            <comment text="Condition"/>
+            <while expression="stockBalles &gt; 0">
+                <output expression="&quot;Balles restantes : &quot; &amp; stockBalles" newline="True"/>
+                <output expression="&quot;&#202;tes-vous pr&#234;t ?&quot;" newline="True"/>
+                <input variable="pret"/>
+                <if expression="pret">
+                    <then>
+                        <output expression="&quot;Lancer la balle&quot;" newline="True"/>
+                        <comment text="d&#233;cr&#233;mentation"/>
+                        <assign variable="stockBalles" expression="stockBalles - 1"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;Ne pas lancer la balle&quot;" newline="True"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;Plus de balles de balles restantes&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

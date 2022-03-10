@@ -1,0 +1,34 @@
+Algorithme Demo
+DEBUT
+  Variable compteur : Entier
+
+  // <!> Initialisation
+  compteur <- 0
+
+  // <!> Condition
+  TANTQUE compteur < 10 FAIRE
+    Ecrire(compteur)
+    
+    // <!> Incrémentation
+    compteur <- compteur + 1
+
+  FINTQ
+  
+FIN
+// -----
+Algorithme Demo
+DEBUT
+  Variable nb : Entier
+
+  Ecrire("Entrez un nombre entre 1 et 10 :")
+  // Initialisation
+  Lire(nb)
+
+  // Condition
+  TANTQUE nb < 1 || nb > 10 FAIRE
+    Ecrire("Erreur, vous devez entrer un nombre entre 1 et 10 :")
+    // Modification
+    Lire(nb)
+  FINTQ
+  
+FIN
