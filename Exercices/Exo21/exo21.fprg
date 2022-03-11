@@ -4,14 +4,35 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="Quentin Geerts"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-03-11 08:42:18 "/>
+        <attribute name="saved" value="2022-03-11 09:42:45 "/>
         <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMTE7IjA4OjQwOjIwICI7MzYxOA=="/>
-        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMTE7IjA4OjQyOjE4ICI7MjszNzM2"/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMTE7IjA5OjI4OjMyICI7MTtRdWVudGluIEdlZXJ0cztERVNLVE9QLUQzNkdJSko7MjAyMi0wMy0xMDsiMDI6MDU6MDcgIjtleG8xNi5mcHJnOzgzODM="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMTE7IjA5OjQyOjQ1ICI7NDszNzM5"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="exo 21 &#13;&#10;&#13;&#10;Am&#233;liorez le &quot;C'est plus, c'est moins, c'est gagn&#233;&quot; pour qu'il tourne en boucle tant que le justePrix n'a pas &#233;t&#233; trouv&#233; &#13;&#10;&#13;&#10;L'ordinateur choisit un nombre al&#233;atoirement entre 1 et 100&#13;&#10; &#13;&#10;L'utilisateur est invit&#233; &#224; entrer un nombre et l'algorithme nous r&#233;pond &quot;C'est plus&quot; ou &quot;C'est moins&quot; &#13;&#10;&#13;&#10;Lorsqu'on a trouv&#233; le bon nombre, l'algorithme affiche le nombre de tentatives effectu&#233;es pour trouver le r&#233;sultat"/>
+            <comment text="D&#233;claration"/>
+            <declare name="justePrix, proposition, nbTentatives" type="Integer" array="False" size=""/>
+            <assign variable="nbTentatives" expression="0"/>
+            <assign variable="proposition" expression="0"/>
+            <comment text="G&#233;n&#233;rer le juste prix par un nombre al&#233;atoire"/>
+            <assign variable="justePrix" expression="Random(100) + 1"/>
+            <while expression="proposition != justePrix">
+                <output expression="&quot;Entrez une proposition : &quot;" newline="True"/>
+                <input variable="proposition"/>
+                <assign variable="nbTentatives" expression="nbTentatives + 1"/>
+                <if expression="proposition &lt; justePrix">
+                    <then>
+                        <output expression="&quot;C'est plus&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;C'est moins&quot;" newline="True"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;C'est gagn&#233; en &quot; &amp; nbTentatives &amp; &quot; tentatives&quot;" newline="True"/>
         </body>
     </function>
 </flowgorithm>
