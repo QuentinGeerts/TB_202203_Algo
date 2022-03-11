@@ -1,0 +1,44 @@
+Algorithme Exo15
+DEBUT
+  Variable table, facteur, resultat : Entier
+  Variable tableMax, choix : Entier
+
+  Ecrire("Menu : ")
+  Ecrire("1. Afficher la table de multiplication de X")
+  Ecrire("2. Afficher une range de table :")
+  Lire(choix)
+
+  TANTQUE choix != 1 && choix != 2 FAIRE
+    Ecrire("Valeurs permises : 1 ou 2")
+    Lire(choix)
+  FINTQ
+  
+  SI choix == 1 ALORS
+    Ecrire("Entrez la table que vous voulez afficher :")
+    Lire(table)
+    tableMax <- table
+
+  SINON
+    Ecrire("De quelle table commencer ?")
+    Lire(table)
+    Ecrire("Jusqu'à quelle tablle")
+    Lire(tableMax)
+  
+  FINSI
+
+  TANTQUE table <= tableMax FAIRE
+    facteur <- 1
+
+    TANTQUE facteur <= 10 FAIRE
+      resultat <- facteur * table
+      Ecrire(facteur & " * " & table & " = " & resultat)
+      facteur <- facteur + 1
+    FINTQ
+
+    table <- table + 1
+    
+  FINTQ
+  
+  
+
+FIN

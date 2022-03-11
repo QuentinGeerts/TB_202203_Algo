@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-10 03:59:47 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMTA7IjAzOjE4OjUwICI7MzYyMA=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMTA7IjAzOjU5OjQ3ICI7NDszNzQy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="exo 19 &#192; l&#8217;aide de la boucle TANTQUE FAIRE, r&#233;alisez un algorithme calculant le r&#233;sultat de N exposant 10 &#13;&#10;N &#233;tant un nombre saisi par l&#8217;utilisateur"/>
+            <comment text="D&#233;claration"/>
+            <declare name="base, resultat" type="Real" array="False" size=""/>
+            <declare name="exposant, compteur" type="Integer" array="False" size=""/>
+            <assign variable="compteur" expression="0"/>
+            <assign variable="resultat" expression="1"/>
+            <assign variable="exposant" expression="10"/>
+            <comment text="Demander &#224; l'utilisateur de rentrer la base"/>
+            <output expression="&quot;Entrez la base :&quot;" newline="True"/>
+            <input variable="base"/>
+            <comment text="Calculer l'exposant"/>
+            <while expression="compteur &lt; exposant">
+                <assign variable="resultat" expression="resultat * base"/>
+                <assign variable="compteur" expression="compteur + 1"/>
+            </while>
+            <comment text="Affichage du r&#233;sultat"/>
+            <output expression="base &amp; &quot; exposant &quot; &amp; exposant &amp; &quot; = &quot; &amp; resultat" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

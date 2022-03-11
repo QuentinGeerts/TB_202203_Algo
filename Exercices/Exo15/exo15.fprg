@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-10 12:18:02 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMTA7IjExOjUwOjM0ICI7MzYxNw=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMTA7IjEyOjE4OjAyICI7MjszNzI2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="&#192; l&#8217;aide de deux boucles, affichez les tables de multiplication de 1 &#224; 9"/>
+            <comment text="D&#233;claration"/>
+            <declare name="table, facteur, resultat" type="Integer" array="False" size=""/>
+            <declare name="tableMax, choix" type="Integer" array="False" size=""/>
+            <output expression="&quot;Menu : &quot;" newline="True"/>
+            <output expression="&quot;1. Afficher la table de multiplication de X : &quot;" newline="True"/>
+            <output expression="&quot;2. Afficher une range de table : &quot;" newline="True"/>
+            <input variable="choix"/>
+            <while expression="choix != 1 &amp;&amp; choix != 2">
+                <output expression="&quot;Valeurs permises : 1 ou 2.&quot;" newline="True"/>
+                <input variable="choix"/>
+            </while>
+            <if expression="choix == 1">
+                <then>
+                    <output expression="&quot;Entrez la table que vous voulez afficher : &quot;" newline="True"/>
+                    <input variable="table"/>
+                    <assign variable="tableMax" expression="table"/>
+                </then>
+                <else>
+                    <output expression="&quot;De quelle table commencer ?&quot;" newline="True"/>
+                    <input variable="table"/>
+                    <output expression="&quot;Jusqu'&#224; quelle table voulez-vous calculer ?&quot;" newline="True"/>
+                    <input variable="tableMax"/>
+                </else>
+            </if>
+            <comment text="Initialisation"/>
+            <while expression="table &lt;= tableMax">
+                <assign variable="facteur" expression="1"/>
+                <comment text="Condition"/>
+                <while expression="facteur &lt;= 10">
+                    <assign variable="resultat" expression="facteur * table"/>
+                    <output expression="facteur &amp; &quot; * &quot; &amp; table &amp; &quot; = &quot; &amp; resultat" newline="True"/>
+                    <comment text="Incr&#233;mentation / Modification"/>
+                    <assign variable="facteur" expression="facteur + 1"/>
+                </while>
+                <assign variable="table" expression="table + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

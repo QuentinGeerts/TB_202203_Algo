@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Quentin Geerts"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-03-10 04:05:45 "/>
+        <attribute name="created" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMTA7IjA0OjAzOjE5ICI7MzYyMA=="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMTA7IjA0OjAzOjI4ICI7MTtRdWVudGluIEdlZXJ0cztERVNLVE9QLUQzNkdJSko7MjAyMi0wMy0xMDsiMDM6MTg6NTAgIjtleG8xOS5mcHJnOzgzODE="/>
+        <attribute name="edited" value="UXVlbnRpbiBHZWVydHM7REVTS1RPUC1EMzZHSUpKOzIwMjItMDMtMTA7IjA0OjA1OjQ1ICI7MTszNzI5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="exo 20 Reprenez l&#8217;exercice pr&#233;c&#233;dent et modifiez le pour que l&#8217;utilisateur entre &#233;galement l&#8217;exposant qu&#8217;il d&#233;sire calculer"/>
+            <comment text="D&#233;claration"/>
+            <declare name="base, resultat" type="Real" array="False" size=""/>
+            <declare name="exposant, compteur" type="Integer" array="False" size=""/>
+            <assign variable="compteur" expression="0"/>
+            <assign variable="resultat" expression="1"/>
+            <comment text="Demander &#224; l'utilisateur de rentrer la base"/>
+            <output expression="&quot;Entrez la base :&quot;" newline="True"/>
+            <input variable="base"/>
+            <output expression="&quot;Entrez l'exposant : &quot;" newline="True"/>
+            <input variable="exposant"/>
+            <comment text="Calculer l'exposant"/>
+            <while expression="compteur &lt; exposant">
+                <assign variable="resultat" expression="resultat * base"/>
+                <assign variable="compteur" expression="compteur + 1"/>
+            </while>
+            <comment text="Affichage du r&#233;sultat"/>
+            <output expression="base &amp; &quot; exposant &quot; &amp; exposant &amp; &quot; = &quot; &amp; resultat" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
