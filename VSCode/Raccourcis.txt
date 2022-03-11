@@ -1,3 +1,5 @@
+-- Windows / Mac
+
 Commenter / Décommenter
 > CTRL + :
 
@@ -16,6 +18,8 @@ Revenir en arrière
 Revenir en avant
 > CTRL + Y
 
+-- VSCode
+
 Déplacer des lignes
 > ALT + ↑ ↓
 
@@ -27,3 +31,19 @@ Supprimer une ligne
 
 Multi-curseur
 > (se placer à une position) Maintenir ALT enfoncé + clic gauche aux endroits où vous voulez placer le(s) curseur(s)
+
+Sélection de toutes les occurrences
+> CTRL + F2
+
+Saut de ligne
+> CTRL + Enter
+
+Exécuter le script Python
+> CTRL + ALT + SHIFT + Enter
+
+Exécuter la ligne Python
+> SHIFT + Enter
+
+Afficher l'aide à l'auto-complétion
+> CTRL + Espace
+
