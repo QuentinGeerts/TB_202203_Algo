@@ -1,4 +1,6 @@
--- Windows / Mac
+-------------------------
+----- Windows / Mac -----
+-------------------------
 
 Commenter / Décommenter
 > CTRL + :
@@ -18,7 +20,9 @@ Revenir en arrière
 Revenir en avant
 > CTRL + Y
 
--- VSCode
+-------------------------
+-----    VSCode     -----
+-------------------------
 
 Déplacer des lignes
 > ALT + ↑ ↓
