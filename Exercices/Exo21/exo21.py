@@ -8,4 +8,23 @@
 
 # Lorsqu'on a trouvé le bon nombre, l'algorithme affiche le nombre de tentatives effectuées pour trouver le résultat
 
+from random import randint, random, randrange
 
+# Générer un nombre aléatoire entre 1 et 100
+justePrix = randint(1, 100)
+proposition = 0
+nb_tentatives = 0
+
+while proposition != justePrix: 
+  
+  proposition = int(input("Entrez la proposition : "))
+  nb_tentatives += 1
+
+  if proposition != justePrix:
+    if proposition < justePrix: 
+      print("C'est plus")
+    else: 
+      print("C'est moins")
+  
+
+print("Vous avez trouvé le juste prix en", nb_tentatives, "tentatives.")
