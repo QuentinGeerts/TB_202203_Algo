@@ -1,4 +1,7 @@
-# exo 01 Trouvez une méthode permettant d’inverser le contenu de deux variables (du même type évidemment) Si nb 1 5 et nb 2 7 après ce traitement, nb 1 7 et nb 2 5
+# exo 01 
+# Trouvez une méthode permettant d’inverser le contenu de deux variables 
+# (du même type évidemment) 
+# Si nb 1 5 et nb 2 7 après ce traitement, nb 1 7 et nb 2 5
 
 
 # Affectation

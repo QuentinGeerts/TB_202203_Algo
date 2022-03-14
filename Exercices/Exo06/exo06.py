@@ -1,11 +1,11 @@
-
+# Déclaration et initialisation des différentes variables
 a = 3
 b = 9
 c = False
 d = not (c)
 e = 9
 
-
+# Affichage des conditions
 print(a > 8)
 print(b == 9)
 print(not (a != 3))

@@ -1,3 +1,9 @@
+# exo10 Calculatrice
+# Réalisez l’algorithme d’une calculatrice basique. 
+# L’utilisateur est invité à saisir un nombre, un opérateur et un deuxième nombre. 
+# La calculatrice affiche ensuite le calcul et le résultat. 
+# (Gérer la division par 0)
+
 nb1 = float(input("Entrez le premier nombre : "))
 op = input("Entrez l'opérateur (+, -, *, /, %)")
 nb2 = float(input("Entrez le deuxième nombre : "))

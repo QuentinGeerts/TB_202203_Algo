@@ -1,3 +1,8 @@
+# exo09 Distributeur de boissons
+# Réalisez l’algorithme d’un distributeur de boissons. 
+# Ce dernier propose plusieurs boissons et l’utilisateur choisit celle qu’il désire en entrant le numéro correspondant.
+# N'oubliez pas de vérifier s’il y a encore des boissons en stock.
+
 stockCoca = 0
 stockFanta = 2
 stockEau = 10
