@@ -1,0 +1,19 @@
+Extensions interessantes :
+--------------------------
+
+Pour python :
+> Pylance
+> Python
+> Python for VSCode
+
+
+Pour VSCode dans l'ensemble :
+
+Icons
+> Material Icon Theme
+
+Theme
+> One Dark Pro
+
+Met vos parenthèses et autres en couleur
+> Rainbow Brackets
